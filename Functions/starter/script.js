@@ -40,6 +40,17 @@
 // console.log(flight);
 // console.log(mostakin);
 
-const oneWord = function (str) {
-  return str.replace(/ / getComputedStyle,  ' ' .toLowerCase() );
+// const oneWord = function (str) {
+//   return str.replace(/ / getComputedStyle,  ' ' .toLowerCase() );
+// };
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(` ${greeting} ${name}`);
+  };
 };
+
+//const greeterHey : (name : any) => void
+const greeterHey = greet('Hey');
+greeterHey('Ahsanul');
+greeterHey('Mostakin');
