@@ -44,7 +44,7 @@
 //   return str.replace(/ / getComputedStyle,  ' ' .toLowerCase() );
 // };
 
-const greet = function (greeting) {
+/*const greet = function (greeting) {
   return function (name) {
     console.log(` ${greeting} ${name}`);
   };
@@ -54,3 +54,20 @@ const greet = function (greeting) {
 const greeterHey = greet('Hey');
 greeterHey('Ahsanul');
 greeterHey('Mostakin');
+*/
+
+const lufthansa = {
+  airline: 'Luftansa',
+  iataCode: 'LH',
+  bookings: [],
+
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+lufthansa.book(239, 'Ahsanul Mostakin');
+lufthansa.book(239, 'Angel Kristina');
+console.log(lufthansa);
